@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../tutorials/spring-boot-modules/spring-boot-documentation/spring-boot-documentation.iml" filepath="$PROJECT_DIR$/../tutorials/spring-boot-modules/spring-boot-documentation/spring-boot-documentation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tech-challenge-core.iml" filepath="$PROJECT_DIR$/tech-challenge-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../tech-challenge-custumer/tech-challenge-custumer.iml" filepath="$PROJECT_DIR$/../tech-challenge-custumer/tech-challenge-custumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../tech-challenge-v2/tech-challenge-v2.iml" filepath="$PROJECT_DIR$/../tech-challenge-v2/tech-challenge-v2.iml" />
+    </modules>
+  </component>
+</project>
