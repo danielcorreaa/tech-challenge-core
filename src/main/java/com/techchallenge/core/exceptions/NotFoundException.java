@@ -1,4 +1,4 @@
-package com.techchallenge.exceptions;
+package com.techchallenge.core.exceptions;
 
 public class NotFoundException  extends RuntimeException{
 	/**

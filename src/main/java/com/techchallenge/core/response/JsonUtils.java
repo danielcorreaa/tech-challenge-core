@@ -1,4 +1,4 @@
-package com.techchallenge.response;
+package com.techchallenge.core.response;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;

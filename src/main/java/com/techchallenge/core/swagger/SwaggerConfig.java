@@ -1,4 +1,4 @@
-package com.techchallenge.swagger;
+package com.techchallenge.core.swagger;
 
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.annotations.enums.SecuritySchemeType;
@@ -6,7 +6,8 @@ import io.swagger.v3.oas.annotations.info.Contact;
 import io.swagger.v3.oas.annotations.info.Info;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.security.SecurityScheme;
-import io.swagger.v3.oas.annotations.security.SecuritySchemes;
+import io.swagger.v3.oas.models.media.StringSchema;
+import org.springdoc.core.utils.SpringDocUtils;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
@@ -15,11 +16,11 @@ import org.springframework.context.annotation.Configuration;
         contact = @Contact(name = "${swagger.contact.name}", email = "${swagger.contact.email}")),
         security = {@SecurityRequirement(name = "bearerToken")}
 )
-@SecuritySchemes({
-        @SecurityScheme(name = "bearerToken", type = SecuritySchemeType.HTTP, 
-                        scheme = "bearer", bearerFormat = "JWT")
-})
+@SecurityScheme(name = "bearerToken", type = SecuritySchemeType.HTTP,  scheme = "bearer", bearerFormat = "JWT")
 public class SwaggerConfig {
 
+    static {
+        SpringDocUtils.getConfig().replaceWithSchema(Object.class,new StringSchema());
+    }
 	
 }

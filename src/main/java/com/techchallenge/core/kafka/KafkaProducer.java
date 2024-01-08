@@ -1,4 +1,4 @@
-package com.techchallenge.infrastructure.message.config;
+package com.techchallenge.core.kafka;
 
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.StringSerializer;
