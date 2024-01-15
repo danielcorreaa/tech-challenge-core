@@ -11,11 +11,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-public class KafkaProducer {
+public class KafkaProducerConfig {
 
     private String bootstrapAddress;
 
-    public KafkaProducer(String bootstrapAddress) {
+    public KafkaProducerConfig(String bootstrapAddress) {
         this.bootstrapAddress = bootstrapAddress;
     }
 
