@@ -27,6 +27,6 @@ public class KafkaTopic {
     }
 
     public NewTopic createTopic(int numPartitions, short replicationFactor) {
-        return new NewTopic(topic, numPartitions, (short) replicationFactor);
+        return new NewTopic(topic, numPartitions,  replicationFactor);
     }
 }

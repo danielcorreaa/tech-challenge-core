@@ -40,10 +40,4 @@ public class ExceptionHandlerConfig {
 		return ResponseEntity.badRequest().body(Result.badRequest(errors));
 	}
 
-	@ExceptionHandler(FeignException.class)
-	public ResponseEntity<Result<Object>> FeignException(FeignException ex){
-		Result<Object> result = Result.buildResultError(ex.status(), ex.getMessage());
-		return ResponseEntity.status(ex.status()).body(result);
-	}
-
 }
