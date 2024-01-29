@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.techchallenge</groupId>
 	<artifactId>tech-challenge-core</artifactId>
-	<version>0.0.3</version>
+	<version>0.0.2</version>
 	<name>tech-challenge-core</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
@@ -73,46 +73,24 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
+
 	<distributionManagement>
 		<repository>
-			<id>internal.repo</id>
-			<name>Temporary Staging Repository</name>
-			<url>file://${project.build.directory}/mvn-repo</url>
+			<id>github</id>
+			<name>GitHub OWNER Apache Maven Packages</name>
+			<url>https://maven.pkg.github.com/danielcorreaa/mvn-repo</url>
 		</repository>
 	</distributionManagement>
+
 	<build>
 		<plugins>
 			<plugin>
 				<artifactId>maven-deploy-plugin</artifactId>
 				<version>3.1.1</version>
-				<configuration>
-					<altDeploymentRepository>internal.repo::default::file://${project.build.directory}/mvn-repo</altDeploymentRepository>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>com.github.github</groupId>
-				<artifactId>site-maven-plugin</artifactId>
-				<version>0.11</version>
-				<configuration>
-					<message>Maven artifacts for ${project.version}</message>  <!-- git commit message -->
-					<noJekyll>true</noJekyll>                                  <!-- disable webpage processing -->
-					<outputDirectory>${project.build.directory}/mvn-repo</outputDirectory> <!-- matches distribution management repository url above -->
-					<branch>refs/heads/mvn-repo</branch>                       <!-- remote branch name -->
-					<includes><include>**/*</include></includes>
-					<repositoryName>tech-challenge-core</repositoryName>      <!-- github repo name -->
-					<repositoryOwner>danielcorreaa</repositoryOwner>    <!-- github username  -->
-				</configuration>
-				<executions>
-					<!-- run site-maven-plugin's 'site' target as part of the build's normal 'deploy' phase -->
-					<execution>
-						<goals>
-							<goal>site</goal>
-						</goals>
-						<phase>deploy</phase>
-					</execution>
-				</executions>
-			</plugin>
+		    </plugin>
 		</plugins>
+
+
 	</build>
 
 
