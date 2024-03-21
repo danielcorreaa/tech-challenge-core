@@ -9,14 +9,16 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.techchallenge</groupId>
-	<artifactId>tech-challenge-core</artifactId>
-	<version>0.0.3</version>
-	<name>tech-challenge-core</name>
+	<artifactId>hackathon-ponto-eletronico-core</artifactId>
+	<version>0.0.1</version>
+	<name>hackathon-ponto-eletronico-core</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>17</java.version>
 		<spring-cloud.version>2022.0.4</spring-cloud.version>
 		<github.global.server>mvn-repo</github.global.server>
+		<maven.compiler.source>17</maven.compiler.source>
+		<maven.compiler.target>17</maven.compiler.target>
 	</properties>
 	<dependencies>
 		<dependency>
