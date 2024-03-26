@@ -1,6 +1,8 @@
 package com.techchallenge.core.response;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 
 import java.util.List;
@@ -60,6 +62,13 @@ public class Result<T> {
 
 	public static <T> Result<T> notFound(List<String> errors) {	
 		return new Result<>(HttpStatus.NOT_FOUND.value(), errors);
+	}
+
+	@JsonIgnore
+	public HttpHeaders getHeadersNosniff(){
+		HttpHeaders httpHeaders = new HttpHeaders();
+		httpHeaders.set("X-Content-Type-Options","nosniff");
+		return httpHeaders;
 	}
 
 }

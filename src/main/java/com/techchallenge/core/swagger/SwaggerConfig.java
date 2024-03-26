@@ -22,5 +22,6 @@ public class SwaggerConfig {
     static {
         SpringDocUtils.getConfig().replaceWithSchema(Object.class,new StringSchema());
     }
-	
+
+
 }
